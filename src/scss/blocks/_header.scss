@@ -1,0 +1,16 @@
+.header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    z-index: 1;
+    height: max-content;
+    @include laptop {
+        grid-column: 1/13;
+        padding-top: 32px;
+        padding-bottom: 30px;
+    }
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

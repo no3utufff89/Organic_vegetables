@@ -1,0 +1,191 @@
+.steps {
+   &__desktop {
+    display: none;
+    @include laptop {
+        display: grid;
+        grid-template-columns: 48% 52%;
+    }
+   }
+  
+ 
+   &__image {
+    overflow: hidden;
+    border-radius: 30px;
+    background-image: url(./../img/steps_bg.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 450px;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(20, 20, 20, 0.2);
+    }
+   }
+    &__title {
+        font-weight: 600;
+        font-size: 28px;
+        color: $white;
+        letter-spacing: -0.5px;
+        &_variant {
+            color: rgba(251, 251, 251, 0.3);
+        }
+    }
+    &__text {
+        font-size: 14px;
+        line-height: 18px;
+        color: $white;
+        margin-bottom: 25px;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        @include tablet {
+            max-width: 450px;
+            justify-self: center;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+}
+.mobile-wrapper {
+    @include laptop {
+        display: none;
+    }
+    &__image {
+        border-radius: 30px;
+        background-image: url(./../img/steps_bg.jpeg);
+        height: 450px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(20, 20, 20, 0.2);
+        }
+    }
+  &__col {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+    &__col:first-child {
+        background-color: $bg_secondary;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        @include tablet {
+            padding: 100px 64px;
+        }
+      
+    }
+    &__col:nth-child(2){
+        background-color: $bg_primary;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        @include tablet {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+       
+    }
+}
+.desktop-wrapper {
+    &__container {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        max-width: 1080px;
+        width: 100%;
+        justify-self: center;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    &__col:first-child {
+        background-color: $bg_secondary;
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    &__col:nth-child(2){
+        background-color: $bg_primary;
+        grid-row: 1/2;
+        grid-column: 2/3;
+    }
+    &__image {
+        grid-column: 1/6;
+        background-image: url(./../img/steps_bg.jpeg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 458px;
+        height: 559px;
+        border-radius: 30px;
+        overflow: hidden;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(20, 20, 20, 0.2);
+        }
+    }
+    &__steps {
+        grid-column: 7/13;
+        justify-self: end;
+        align-self: center;
+    }
+}
+.step {
+    display: flex;
+    column-gap: 24px;
+    align-items: center;
+    border-radius: 30px;
+    background-color: $white;
+    padding: 12px 24px;
+    &__number {
+        background-color: $bg_secondary;
+        border-radius: 50%;
+        width: 42px;
+        height: 42px;
+        border: 2px solid #D0BDC3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 20px;
+        flex-shrink: 0;
+        color: $white;
+    }
+    &__text {
+        color: rgba(20, 20, 20, 0.6);
+        font-size: 12px;
+       @include tablet {
+        font-size: 16px;
+       }
+        &>b {
+            font-weight: 600;
+            color: rgb(20, 20, 20);
+        }
+    }
+}

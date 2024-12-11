@@ -1,0 +1,55 @@
+.form {
+    background-color: $white;
+    border-radius: 30px;
+    padding: 40px 20px;
+    @include tablet {
+        padding: 50px 100px;
+    }
+    @include laptop {
+        padding: 50px;
+       max-width: 50%;
+    }
+    
+    &__legend {
+        margin-bottom: 40px;
+    }
+    &__fieldset {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+    }
+    &__input {
+        border-radius: 30px;
+        padding: 14px;
+        border: 1px solid rgba(20, 20, 20, 0.2);
+        resize: none;
+        &::placeholder {
+            font-weight: 500;
+            color: rgb(20, 20, 20);
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+    &__btn {
+        height: 50px;
+        border-radius: 30px;
+        background-color: $bg_primary;
+        color: $white;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+    }
+}
+.form-title {
+   
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    &_colored-secondary {
+        color: $bg_secondary;
+    }
+    &_colored-primary {
+        color: $bg_primary;
+    }
+}

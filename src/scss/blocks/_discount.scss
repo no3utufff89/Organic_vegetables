@@ -1,0 +1,43 @@
+.discount {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        @include laptop {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+    &__container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    &__slogan {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 48px;
+        letter-spacing: -0.5px;
+        line-height: 50px;
+        background-color: $bg_primary;
+        border-radius: 12px;
+        color: $white;
+        padding-left: 10px;
+        padding-right: 10px;
+       @include tablet {
+        font-size: 64px;
+        line-height: 70px;
+       }
+       @include laptop {
+        text-align: center;
+       }
+    }
+    &__text {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 48px;
+        letter-spacing: -0.5px;
+        line-height: 50px;
+        text-align: center;
+    }
+}
